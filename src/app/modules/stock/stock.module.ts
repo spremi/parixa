@@ -76,6 +76,9 @@ import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
     MatTableModule,
     MatStepperModule,
   ],
+  exports: [
+    KitchenSinkComponent,
+  ],
 })
 export class StockModule {
   constructor(@Optional() @SkipSelf() parentModule: StockModule) {
