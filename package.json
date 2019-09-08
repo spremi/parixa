@@ -44,5 +44,14 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   },
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Sanjeev Premi",
+    "email": "spremi@ymail.com",
+    "url": "https://github.com/spremi"
+  },
+  "homepage": "https://github.com/spremi/parixa",
+  "bugs": {
+    "url": "https://github.com/spremi/parixa/issues"
+  }
 }
