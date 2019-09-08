@@ -1,4 +1,6 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+#
+# [parixa]
+#
 
 # compiled output
 /dist
@@ -44,3 +46,12 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Patch & diff files
+*.patch
+*.diff
+*.orig
+*.rej
+
+# Specifically, don't ignore these files
+!.gitignore
