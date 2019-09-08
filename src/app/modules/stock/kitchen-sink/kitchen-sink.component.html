@@ -1,1 +1,515 @@
-<p>kitchen-sink works!</p>
+<section>
+  <h2>Button</h2>
+
+  <div class="vert">
+    <div class="horiz">
+      <button mat-button>go</button>
+      <button mat-icon-button><mat-icon>search</mat-icon></button>
+      <button mat-raised-button>go</button>
+      <button mat-fab><mat-icon>home</mat-icon></button>
+      <button mat-mini-fab><mat-icon>favorite</mat-icon></button>
+    </div>
+
+    <div class="horiz">
+      <button mat-button color="primary">PRIMARY</button>
+      <button mat-button color="accent">ACCENT</button>
+      <button mat-button color="warn">WARN</button>
+    </div>
+
+    <div class="horiz">
+      <button mat-raised-button color="primary">PRIMARY</button>
+      <button mat-raised-button color="accent">ACCENT</button>
+      <button mat-raised-button color="warn">WARN</button>
+    </div>
+
+    <div class="horiz">
+      <button mat-icon-button color="primary"><mat-icon>search</mat-icon></button>
+      <button mat-icon-button color="accent"><mat-icon>search</mat-icon></button>
+      <button mat-icon-button color="warn"><mat-icon>search</mat-icon></button>
+    </div>
+
+    <div class="horiz">
+      <button mat-fab color="primary"><mat-icon>home</mat-icon></button>
+      <button mat-fab color="accent"><mat-icon>home</mat-icon></button>
+      <button mat-fab color="warn"><mat-icon>home</mat-icon></button>
+    </div>
+
+    <div class="horiz">
+      <button mat-mini-fab color="primary"><mat-icon>home</mat-icon></button>
+      <button mat-mini-fab color="accent"><mat-icon>home</mat-icon></button>
+      <button mat-mini-fab color="warn"><mat-icon>home</mat-icon></button>
+    </div>
+
+    <h3>Anchors</h3>
+    <div class="horiz">
+      <a mat-button href="#">Google</a>
+      <a mat-icon-button href="#"><mat-icon>search</mat-icon></a>
+      <a mat-raised-button href="#">Google</a>
+      <a mat-fab href="#"><mat-icon>home</mat-icon></a>
+      <a mat-mini-fab href="#"><mat-icon>favorite</mat-icon></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Button toggle</h2>
+
+  <div class="horiz">
+    <div class="vert">
+      <h3>Single selection</h3>
+
+      <mat-button-toggle-group>
+        <mat-button-toggle>Ketchup</mat-button-toggle>
+        <mat-button-toggle>Mustard</mat-button-toggle>
+        <mat-button-toggle>Mayo</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <div class="vert">
+      <h3>Multi selection</h3>
+
+      <mat-button-toggle-group multiple>
+        <mat-button-toggle>Ketchup</mat-button-toggle>
+        <mat-button-toggle>Mustard</mat-button-toggle>
+        <mat-button-toggle>Mayo</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <div class="vert">
+      <h3>Standalone</h3>
+      <mat-button-toggle>Toggle</mat-button-toggle>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Card</h2>
+
+  <div class="horiz">
+    <mat-card>
+      Simple card
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Complicated card</mat-card-title>
+      <mat-card-subtitle>Subtitle</mat-card-subtitle>
+      <mat-card-content>
+        <p>This is some stuff</p>
+        <p>And more stuff</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button>ONE</button>
+        <button mat-flat-button>TWO</button>
+      </mat-card-actions>
+
+      <mat-card-footer>
+        Hurray
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</section>
+
+<section>
+  <h2>Checkbox</h2>
+
+  <div class="horiz">
+    <mat-checkbox checked="true">Checked!</mat-checkbox>
+    <mat-checkbox>With a label</mat-checkbox>
+    <mat-checkbox></mat-checkbox>Without a label
+  </div>
+</section>
+
+<section>
+  <h2>Chips</h2>
+
+  <div class="horiz">
+    <mat-chip-list>
+      <mat-chip>Barbeque Cheddar</mat-chip>
+      <mat-chip>Sea Salt and Vinegar</mat-chip>
+      <mat-chip>Manta Ray</mat-chip>
+    </mat-chip-list>
+
+    <mat-chip-list>
+      <mat-basic-chip>Tomato</mat-basic-chip>
+      <mat-basic-chip>Scallion</mat-basic-chip>
+      <mat-basic-chip>Cilantro</mat-basic-chip>
+    </mat-chip-list>
+  </div>
+</section>
+
+<section>
+  <h2>Datepicker</h2>
+
+  <div class="vert">
+    <mat-form-field>
+      <input type="text" matInput [matDatepicker]="birthday" placeholder="Birthday">
+      <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>
+      <mat-datepicker #birthday></mat-datepicker>
+    </mat-form-field>
+
+    <h3>Disabled datepicker</h3>
+
+    <mat-form-field>
+      <input type="text" disabled matInput [matDatepicker]="departureDate" placeholder="Departure date">
+      <mat-datepicker-toggle matSuffix [for]="departureDate"></mat-datepicker-toggle>
+      <mat-datepicker #departureDate></mat-datepicker>
+    </mat-form-field>
+  </div>
+</section>
+
+<section>
+  <h2>Grid list</h2>
+
+  <div class="vert">
+    <mat-grid-list cols="4">
+      <mat-grid-tile>Fry</mat-grid-tile>
+      <mat-grid-tile>Leela</mat-grid-tile>
+      <mat-grid-tile>Amy</mat-grid-tile>
+      <mat-grid-tile>Bender</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</section>
+
+<section>
+<h2>Icon</h2>
+
+  <div>
+    <mat-icon>grade</mat-icon>
+  </div>
+</section>
+
+
+<section>
+  <h2>Input</h2>
+
+  <div class="vert">
+    <mat-form-field floatLabel="never">
+      <input matInput placeholder="name" type="text">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Surname</mat-label>
+      <input matInput value="Baggins">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="number" matInput placeholder="amount">
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+      <mat-hint>Dolla dolla bills</mat-hint>
+      <mat-error>Recession</mat-error>
+    </mat-form-field>
+  </div>
+</section>
+
+<section>
+  <h2>List</h2>
+
+  <div class="vert">
+    <mat-list>
+      <mat-list-item>Robot</mat-list-item>
+      <mat-list-item>Android</mat-list-item>
+      <mat-list-item>Cyborg</mat-list-item>
+    </mat-list>
+
+    <mat-nav-list>
+      <a mat-list-item href="https://google.com">Search</a>
+      <a mat-list-item href="https://google.com">Find</a>
+      <a mat-list-item href="https://google.com">Seek</a>
+    </mat-nav-list>
+  </div>
+</section>
+
+<section>
+<h2>Menu</h2>
+
+  <div class="horiz">
+    <button mat-button [matMenuTriggerFor]="menu">Open</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Mercy</button>
+      <button mat-menu-item>Lucio</button>
+      <button mat-menu-item disabled>Sombra</button>
+    </mat-menu>
+  </div>
+</section>
+
+<section>
+  <h2>Progress bar</h2>
+
+  <div class="vert">
+    <mat-progress-bar value="25"></mat-progress-bar>
+    <mat-progress-bar mode="buffer" value="25" bufferValue="60"></mat-progress-bar>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <mat-progress-bar mode="query"></mat-progress-bar>
+  </div>
+</section>
+
+<section>
+  <h2>Progress spinner</h2>
+
+  <div class="vert">
+    <mat-progress-spinner mode="indeterminate" [diameter]="32"></mat-progress-spinner>
+    <mat-progress-spinner mode="determinate" [value]="60"></mat-progress-spinner>
+  </div>
+</section>
+
+<section>
+  <h2>Radio buttons</h2>
+
+  <div class="vert">
+    <h3>Radio group</h3>
+    <mat-radio-group>
+      <mat-radio-button>Charmander</mat-radio-button>
+      <mat-radio-button>Squirtle</mat-radio-button>
+      <mat-radio-button>Bulbasaur</mat-radio-button>
+    </mat-radio-group>
+
+    <h3>Standalone radios</h3>
+    <mat-radio-button name="onions">White</mat-radio-button>
+    <mat-radio-button name="onions">Yellow</mat-radio-button>
+    <mat-radio-button name="onions">Green</mat-radio-button>
+    <mat-radio-button name="onions" disabled>Red</mat-radio-button>
+  </div>
+</section>
+
+<section>
+  <h2>Select</h2>
+
+  <div class="horiz">
+    <mat-form-field>
+      <mat-select value="ceramic">
+        <mat-option value="glass">Glass</mat-option>
+        <mat-option value="ceramic">Ceramic</mat-option>
+        <mat-option value="steel">Steel</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</section>
+
+<section>
+  <h2>Sidenav</h2>
+
+  <div>
+    <mat-sidenav-container>
+      <mat-sidenav opened>
+        On the side
+        <button>Button for testing focus trapping</button>
+      </mat-sidenav>
+      Main content
+      <button>Click me</button>
+    </mat-sidenav-container>
+  </div>
+</section>
+
+<section>
+  <h2>Slide-toggle</h2>
+
+  <div class="vert">
+    <mat-slide-toggle checked="true">Already checked!</mat-slide-toggle>
+    <mat-slide-toggle>With a label</mat-slide-toggle>
+
+    <mat-slide-toggle></mat-slide-toggle>Without a label
+  </div>
+</section>
+
+<section>
+  <h2>Slider</h2>
+
+  <div class="vert">
+    <mat-slider value="20"color="primary"></mat-slider>
+    <mat-slider value="50"color="warn"></mat-slider>
+    <mat-slider tickInterval="1" min="1" max="10" value="5" thumbLabel></mat-slider>
+    <mat-slider disabled></mat-slider>
+  </div>
+</section>
+
+<section>
+  <h2>Tabs</h2>
+
+  <div class="vert">
+    <mat-tab-group>
+      <mat-tab label="Overview">
+        The overview
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          API docs
+        </ng-template>
+        The API docs
+      </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group color="accent" backgroundColor="primary">
+      <mat-tab label="01">TAB 01</mat-tab>
+      <mat-tab label="02">TAB 02</mat-tab>
+      <mat-tab label="03">TAB 03</mat-tab>
+    </mat-tab-group>
+
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link href="#">Google</a>
+      <a mat-tab-link href="#" active>Also Google</a>
+    </nav>
+  </div>
+</section>
+
+<section>
+  <h2>Paginator</h2>
+
+  <div>
+    <mat-paginator
+      [length]="100"
+      [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+  </div>
+</section>
+
+<section>
+  <h2>Sort</h2>
+
+  <div>
+    <table matSort>
+      <tr>
+        <th mat-sort-header="name">Name</th>
+        <th mat-sort-header="calories">Calories</th>
+        <th mat-sort-header="fat">Fat</th>
+        <th mat-sort-header="carbs">Carbs</th>
+        <th mat-sort-header="protein">Protein</th>
+      </tr>
+
+      <tr>
+        <td>Cupcake</td>
+        <td>305</td>
+        <td>4</td>
+        <td>67</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Toolbar</h2>
+
+  <div>
+    <mat-toolbar>Basic toolbar</mat-toolbar>
+    <mat-toolbar>
+      <mat-toolbar-row>Multi row</mat-toolbar-row>
+      <mat-toolbar-row>Toolbar</mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+</section>
+
+<section>
+  <h2>Toolbar</h2>
+
+  <div>
+  <mat-toolbar>
+    <span>Title</span><span class="spacer"></span>
+    <button mat-flat-button>FLAT</button>&nbsp;&nbsp;
+    <button mat-raised-button>RAISED</button>&nbsp;&nbsp;
+    <button mat-icon-button><mat-icon>home</mat-icon></button>&nbsp;&nbsp;
+  </mat-toolbar>
+
+  <mat-toolbar color="primary">
+    <span>Title</span>
+    <span class="spacer"></span>
+    <button mat-raised-button color="accent">ACCENT</button>&nbsp;&nbsp;
+    <span class="spacer"></span>
+    <button mat-icon-button><mat-icon>search</mat-icon></button>&nbsp;&nbsp;
+    <button mat-icon-button color="accent"><mat-icon>search</mat-icon></button>&nbsp;&nbsp;
+    <span class="spacer"></span>
+    <button mat-icon-button><mat-icon>home</mat-icon></button>&nbsp;&nbsp;
+    <button mat-mini-fab color="warn"><mat-icon>home</mat-icon></button>
+  </mat-toolbar>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>Multi Row Toolbar (Row 1)</mat-toolbar-row>
+    <mat-toolbar-row>Multi Row Toolbar (Row 2)</mat-toolbar-row>
+  </mat-toolbar>
+</div>
+</section>
+
+<section>
+  <h2>Tooltip</h2>
+
+  <div>
+    <button matTooltip="Action!">Go</button>
+  </div>
+</section>
+
+<section>
+  <h2>Expansion Panel</h2>
+
+  <div>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-description>This is a panel description.</mat-panel-description>
+        <mat-panel-title>Panel Title</mat-panel-title>
+      </mat-expansion-panel-header>
+      This is the content text that makes sense here.
+      <mat-action-row>Action</mat-action-row>
+    </mat-expansion-panel>
+  </div>
+</section>
+
+<section>
+  <h2>Selection list</h2>
+
+  <div>
+    <mat-selection-list>
+      <h3 mat-subheader>Groceries</h3>
+      <mat-list-option value="apples">Apples</mat-list-option>
+      <mat-list-option value="bananas">Bananas</mat-list-option>
+      <mat-list-option value="oranges">Oranges</mat-list-option>
+    </mat-selection-list>
+  </div>
+</section>
+
+<section>
+  <h2>Vertical Stepper</h2>
+
+  <div class="vert">
+    <mat-vertical-stepper>
+      <mat-step label="Step 1">Content 1</mat-step>
+      <mat-step label="Step 1">Content 2</mat-step>
+    </mat-vertical-stepper>
+
+    <h3>Vertical Stepper (with label template)</h3>
+
+    <mat-vertical-stepper>
+      <mat-step>
+        <ng-template matStepLabel>NgTemplate Label #1</ng-template>
+        Content 1
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>NgTemplate Label #2</ng-template>
+        Content 2
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+</section>
+
+
+<section>
+  <h2>Horizontal Stepper</h2>
+
+  <div class="horiz">
+    <mat-horizontal-stepper>
+      <mat-step label="Step 1">Content 1</mat-step>
+      <mat-step label="Step 2">Content 2</mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</section>
+
+<section>
+  <h2>Badge</h2>
+
+  <div class="horiz">
+    <button mat-flat-button matBadge="99" color="accent">Test Badge</button>
+    <button mat-raised-button matBadge="99">Test Badge</button>
+  </div>
+</section>

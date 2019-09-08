@@ -1,0 +1,41 @@
+\:host
+  display: flex
+  flex-direction: column
+
+  padding: 16px
+  box-sizing: border-box
+  overflow-y: auto
+
+  section
+    border: 1px solid gray
+    border-radius: 8px
+
+    margin: 16px 0
+
+    h2
+      margin: 0
+      padding: 4px 16px
+      background-color: lightgray
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+
+    div
+      margin: 0
+      padding: 16px
+
+      &.horiz
+        display: flex
+        flex-direction: row
+        align-items: self-start
+        justify-content: space-evenly
+
+      &.vert
+        display: flex
+        flex-direction: column
+
+    mat-toolbar,
+    mat-tab-group
+      margin-bottom: 16px
+
+    .spacer
+      flex: 1
