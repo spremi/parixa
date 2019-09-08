@@ -43,5 +43,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "license": "BSD-3-Clause"
 }
