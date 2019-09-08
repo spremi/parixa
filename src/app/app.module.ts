@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { StockModule } from './modules/stock/stock.module';
+import { InfoComponent } from './parts/info/info.component';
 import { MenuComponent } from './parts/menu/menu.component';
 import { OptionComponent } from './parts/option/option.component';
 import { PilotComponent } from './parts/pilot/pilot.component';
@@ -15,6 +16,7 @@ import { PilotComponent } from './parts/pilot/pilot.component';
     PilotComponent,
     MenuComponent,
     OptionComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
