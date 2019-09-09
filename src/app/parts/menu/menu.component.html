@@ -1,1 +1,4 @@
-<p>menu works!</p>
+<div class="info">Available themes</div>
+<ng-container *ngFor="let theme of themes">
+  <sp-option [data]="theme"></sp-option>
+</ng-container>
