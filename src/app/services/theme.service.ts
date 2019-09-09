@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of, Observable } from 'rxjs';
+import { of, BehaviorSubject, Observable } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
 import { ThemeData } from '../models/theme-data';
 
@@ -10,6 +10,16 @@ import { ThemeData } from '../models/theme-data';
 export class ThemeService {
 
   private themes: ThemeData[] = [];
+
+  /**
+   * Current theme, if any.
+   */
+  private current: ThemeData;
+
+  /**
+   * Behavior subject to track change in selected theme.
+   */
+  private current$: BehaviorSubject<ThemeData> = new BehaviorSubject<ThemeData>(this.current);
 
   constructor(private http: HttpClient) { }
 
@@ -24,5 +34,27 @@ export class ThemeService {
         this.themes = data;
       })
     );
+  }
+
+  /**
+   * Get current theme.
+   */
+  get(): Observable<ThemeData> {
+    return this.current$.asObservable();
+  }
+
+  /**
+   * Set current theme.
+   */
+  set(arg: ThemeData): void {
+    if (!arg) {
+      return;
+    }
+
+    if (!this.current || (this.current && this.current.name !== arg.name)) {
+      this.current = arg;
+
+      this.current$.next(this.current);
+    }
   }
 }
