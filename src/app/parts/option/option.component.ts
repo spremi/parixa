@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ThemeData } from 'src/app/models/theme-data';
 
 @Component({
   selector: 'sp-option',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./option.component.sass'],
 })
 export class OptionComponent implements OnInit {
+  @Input() data: ThemeData;
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
