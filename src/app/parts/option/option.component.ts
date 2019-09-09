@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { ThemeData } from 'src/app/models/theme-data';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'sp-option',
@@ -9,8 +10,13 @@ import { ThemeData } from 'src/app/models/theme-data';
 export class OptionComponent implements OnInit {
   @Input() data: ThemeData;
 
-  constructor() { }
+  constructor(private themeSvc: ThemeService) { }
 
   ngOnInit() {
+  }
+
+  @HostListener('click')
+  onClick() {
+    this.themeSvc.set(this.data);
   }
 }
