@@ -1,6 +1,8 @@
 import {
-  AfterViewInit, Component, ElementRef, HostListener, Input, Renderer2, ViewChild
+  AfterViewInit, Component, ElementRef, HostListener,
+  Input, OnDestroy, Renderer2, ViewChild
 } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ThemeData } from 'src/app/models/theme-data';
 import { ThemeService } from 'src/app/services/theme.service';
 
@@ -9,7 +11,9 @@ import { ThemeService } from 'src/app/services/theme.service';
   templateUrl: './option.component.html',
   styleUrls: ['./option.component.sass'],
 })
-export class OptionComponent implements AfterViewInit {
+export class OptionComponent implements AfterViewInit, OnDestroy {
+  private sub: Subscription;
+
   @Input() data: ThemeData;
 
   @ViewChild('primary', { static: false })
@@ -22,6 +26,7 @@ export class OptionComponent implements AfterViewInit {
   boxWarn: ElementRef<HTMLSpanElement>;
 
   constructor(
+    private elRef: ElementRef,
     private renderer: Renderer2,
     private themeSvc: ThemeService
   ) { }
@@ -30,6 +35,14 @@ export class OptionComponent implements AfterViewInit {
     if (!this.data) {
       return;
     }
+
+    this.sub = this.themeSvc.get().subscribe((theme) => {
+      if (theme && theme.name === this.data.name) {
+        this.renderer.addClass(this.elRef.nativeElement, 'selected');
+      } else {
+        this.renderer.removeClass(this.elRef.nativeElement, 'selected');
+      }
+    });
 
     if (this.data.primary && this.boxPrimary) {
       this.renderer.setStyle(
@@ -50,6 +63,12 @@ export class OptionComponent implements AfterViewInit {
         this.boxWarn.nativeElement,
         'background-color',
         this.data.warn);
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.sub) {
+      this.sub.unsubscribe();
     }
   }
 
