@@ -10,12 +10,28 @@
   cursor: pointer
   user-select: none
 
+  background-color: #d0d0d0
+  color: #121212
+
+  transition: background 0.8s
+
   &.selected
+    background-color: #f0f0f0
+    color: #121212
+
     font-weight: 500
 
+    &:hover
+      cursor: cell
+
+      background-color: #f0f0f0
+      color: #121212
+
   &:hover
-    border-top: 1px solid #d0d0d0
-    border-bottom: 1px solid #d0d0d0
+    background-color: #e0e0e0
+    color: #000000
+
+    transition: background 0.4s
 
   .label
     flex: 1
