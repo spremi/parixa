@@ -11,3 +11,14 @@ $warn: mat-palette($mat-red)
 $theme: mat-light-theme($primary, $accent, $warn)
 
 @include angular-material-theme($theme)
+
+//
+// Custom theme: 'cheerful'
+//
+.cheerful
+  $cheerful-primary: mat-palette($mat-light-blue)
+  $cheerful-accent: mat-palette($mat-purple, A200, A100, A400)
+  $cheerful-warn: mat-palette($mat-pink)
+  $cheerful-theme: mat-light-theme($cheerful-primary, $cheerful-accent, $cheerful-warn)
+
+  @include angular-material-theme($cheerful-theme)
