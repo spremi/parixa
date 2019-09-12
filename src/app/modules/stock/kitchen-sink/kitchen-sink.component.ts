@@ -1,4 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+
+const dialogTpl = '<h1 mat-dialog-title>TITLE</h1>' +
+  '<mat-dialog-content>' +
+  '<p>Dialog Content 1</p>' +
+  '<p>Dialog Content 2</p>' +
+  '</mat-dialog-content>' +
+  '<mat-dialog-actions>' +
+  '<button mat-button mat-dialog-close>CLICK ME</button>' +
+  '</mat-dialog-actions>';
+
+@Component({
+  selector: 'sp-sample-dialog',
+  template: dialogTpl,
+})
+export class SampleDialogComponent {
+
+  constructor() { }
+}
 
 @Component({
   selector: 'sp-kitchen-sink',
@@ -7,9 +26,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KitchenSinkComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  openDialog(): void {
+    this.dialog.open(SampleDialogComponent);
+  }
 }
