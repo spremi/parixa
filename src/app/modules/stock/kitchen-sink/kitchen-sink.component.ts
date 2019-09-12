@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 const dialogTpl = '<h1 mat-dialog-title>TITLE</h1>' +
   '<mat-dialog-content>' +
@@ -26,12 +27,20 @@ export class SampleDialogComponent {
 })
 export class KitchenSinkComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(private snackBar: MatSnackBar, public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   openDialog(): void {
     this.dialog.open(SampleDialogComponent);
+  }
+
+  openSnackbar(): void {
+    this.snackBar.open('Time for a snack!', 'GO', {
+      duration: 5000,
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+    });
   }
 }
