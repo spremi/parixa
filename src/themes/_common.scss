@@ -1,0 +1,47 @@
+//
+// [parixa]
+//
+// Sanjeev Premi <spremi@ymail.com>
+//
+// Available under terms of the BSD-3-Clause license.
+//
+
+/**
+ * Create custom light theme.
+ *
+ * Function mat-light-theme() takes only 3 arguments.
+ *
+ * It, therefore, enforces color combination for background and foreground,
+ * using maps $mat-light-theme-background and $mat-light-theme-foreground
+ * respectively.
+ */
+@function sp-light-theme($primary, $accent, $warn, $foreground, $background) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: false,
+    foreground: $foreground,
+    background: $background,
+  );
+}
+
+/**
+ * Create custom dark theme.
+ *
+ * Function mat-dark-theme() takes only 3 arguments.
+ *
+ * It, therefore, enforces color combination for background and foreground,
+ * using maps $mat-dark-theme-background and $mat-dark-theme-foreground
+ * respectively.
+ */
+@function sp-dark-theme($primary, $accent, $warn, $foreground, $background) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: true,
+    foreground: $foreground,
+    background: $background,
+  );
+}
