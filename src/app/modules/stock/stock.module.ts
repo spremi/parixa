@@ -34,10 +34,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
+import { KitchenSinkComponent, SampleDialogComponent } from './kitchen-sink/kitchen-sink.component';
 
 @NgModule({
-  declarations: [KitchenSinkComponent],
+  declarations: [
+    KitchenSinkComponent,
+    SampleDialogComponent,
+  ],
   imports: [
     CommonModule,
     MatAutocompleteModule,
@@ -78,6 +81,9 @@ import { KitchenSinkComponent } from './kitchen-sink/kitchen-sink.component';
   ],
   exports: [
     KitchenSinkComponent,
+  ],
+  entryComponents: [
+    SampleDialogComponent,
   ],
 })
 export class StockModule {
