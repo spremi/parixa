@@ -1,0 +1,89 @@
+//
+// [parixa]
+//
+// Sanjeev Premi <spremi@ymail.com>
+//
+// Available under terms of the BSD-3-Clause license.
+//
+
+@import '../common.scss';
+@import './palette.scss';
+
+$test-primary: mat-palette($sp-purple, 500, 300, 700);
+$test-accent: mat-palette($sp-teal, 500, 300, 700);
+$test-warn: mat-palette($sp-salmon, 500, 300, 700);
+
+/*
+ * status-bar:              Fill color of status bar
+ * app-bar:                 Fill color of default toolbar
+ * background:              Default fill color?
+ * hover:                   ?
+ * card:                    Fill color of card
+ * dialog:                  Fill color of dialog
+ * disabled-button:         Fill color of disabled button
+ * raised-button            Fill color of raised button
+ * focused-button           ?
+ * selected-button          Fill color of selected toggle button
+ * selected-disabled-button Fill color of selected, but disabled toggle button
+ * disabled-button-toggle   Fill color of disabled toggle button
+ * unselected-chip          Fill color of a chip
+ * disabled-list-option     Fill color of disabled list option
+ */
+$test-background: (
+  status-bar:               map_get($sp-purple, 50),
+  app-bar:                  map_get($sp-purple, 100),
+  background:               map_get($sp-purple, 50),
+  hover:                    rgba(map_get($sp-purple, 800), 0.04),
+  card:                     map_get($sp-purple, 50),
+  dialog:                   white,
+  disabled-button:          rgba(black, 0.12),
+  raised-button:            white,
+  focused-button:           $dark-focused,
+  selected-button:          map_get($sp-purple, 200),
+  selected-disabled-button: map_get($mat-grey, 400),
+  disabled-button-toggle:   map_get($mat-grey, 200),
+  unselected-chip:          map_get($mat-grey, 200),
+  disabled-list-option:     map_get($mat-grey, 200),
+);
+
+/*
+  base:              ?
+  divider:           ?
+  dividers:          ?
+  disabled:          Disabled text?
+  disabled-button:   Disabled button?
+  disabled-text:     Disabled button text?
+  elevation:         Color used for shadow,
+  hint-text:         ?,
+  secondary-text:    ?,
+  icon:              ?
+  icons:             ?
+  text:              Text color
+  slider-min:        Color of slider at minimum position
+  slider-off:        rgba(red, 0.26),
+  slider-off-active: rgba(blue, 0.38),
+ */
+$test-foreground: (
+  base:              map_get($sp-purple, 500),
+  divider:           $dark-dividers,
+  dividers:          $dark-dividers,
+  disabled:          $dark-disabled-text,
+  disabled-button:   $dark-disabled-text,
+  disabled-text:     $dark-disabled-text,
+  elevation:         #4b4453,
+  hint-text:         $dark-disabled-text,
+  secondary-text:    $dark-secondary-text,
+  icon:              rgba(red, 0.54),
+  icons:             rgba(red, 0.54),
+  text:              rgba(map_get($sp-purple, 900), 0.87),
+  slider-min:        rgba(black, 0.87),
+  slider-off:        rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+$test-theme: sp-light-theme(
+  $test-primary,
+  $test-accent,
+  $test-warn,
+  $test-foreground,
+  $test-background)
