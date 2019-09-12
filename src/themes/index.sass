@@ -22,3 +22,11 @@ $theme: mat-light-theme($primary, $accent, $warn)
   $cheerful-theme: mat-light-theme($cheerful-primary, $cheerful-accent, $cheerful-warn)
 
   @include angular-material-theme($cheerful-theme)
+
+//
+// Custom theme: 'test'
+//
+@import './test/_theme.scss'
+
+.test
+  @include angular-material-theme($test-theme)

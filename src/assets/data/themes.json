@@ -12,5 +12,12 @@
     "primary": "#03a9f4",
     "accent": "#e040fb",
     "warn": "#e91e63"
+  },
+  {
+    "name": "test",
+    "label": "Test",
+    "primary": "#845ec2",
+    "accent": "#00c9a7",
+    "warn": "#ff8066"
   }
 ]
