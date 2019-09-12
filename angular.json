@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/theme/index.sass",
+              "src/themes/index.sass",
               "src/styles.sass"
             ],
             "scripts": []
@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/theme/index.sass",
+              "src/themes/index.sass",
               "src/styles.sass"
             ],
             "scripts": []
