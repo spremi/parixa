@@ -200,11 +200,24 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Surname</mat-label>
-      <input matInput value="Baggins">
+      <input matInput placeholder="name" type="text" value="Baggins">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Dummy</mat-label>
+      <input matInput value="" [formControl]="dummy" required>
+      <mat-error *ngIf="dummy.errors?.required">You have an error!</mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <textarea matInput placeholder="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Clearable input">
+      <button mat-button matSuffix mat-icon-button>
+        <mat-icon>close</mat-icon>
+      </button>
     </mat-form-field>
 
     <mat-form-field>

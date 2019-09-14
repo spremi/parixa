@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -26,6 +27,8 @@ export class SampleDialogComponent {
   styleUrls: ['./kitchen-sink.component.sass'],
 })
 export class KitchenSinkComponent implements OnInit {
+
+  dummy = new FormControl('', [Validators.required]);
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) { }
 
