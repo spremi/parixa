@@ -12,5 +12,12 @@
     "primary": "#03a9f4",
     "accent": "#e040fb",
     "warn": "#e91e63"
+  },
+  {
+    "name": "mint-peach-theme",
+    "label": "Mint Peach",
+    "primary": "#2398ab",
+    "accent": "#ff756b",
+    "warn": "#e20338"
   }
 ]
