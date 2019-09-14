@@ -1,0 +1,67 @@
+//
+// [parixa] mint-peach-theme
+//
+// Sanjeev Premi <spremi@ymail.com>
+//
+// Available under terms of the BSD-3-Clause license.
+//
+
+@import '../common.scss';
+@import './palette.scss';
+
+$mint-peach-primary-text: rgba(black, 0.87);
+$mint-peach-secondary-text: rgba(map_get($sp-mint, 900), 0.54);
+$mint-peach-disabled-text: rgba(map_get($sp-mint, 900), 0.38);
+
+$mint-peach-dividers: rgba(map_get($sp-mint, 900), 0.12);
+$mint-peach-focused: rgba(map_get($sp-mint, 900), 0.12);
+
+$mint-peach-primary: mat-palette($sp-mint, 500, 300, 700);
+$mint-peach-accent: mat-palette($sp-peach, 500, 400, 800);
+$mint-peach-warn: mat-palette($sp-red, 500, 300, 700);
+
+$mint-peach-background: (
+  status-bar:               map_get($sp-mint, 50),
+  app-bar:                  map_get($sp-mint, 100),
+  background:               map_get($mat-grey, 50),
+  hover:                    rgba(map_get($sp-mint, 200), 0.28),
+  card:                     map_get($sp-mint, 50),
+  dialog:                   white,
+  disabled-button:          rgba(black, 0.12),
+  raised-button:            white,
+  focused-button:           $mint-peach-focused,
+  selected-button:          map_get($sp-mint, 300),
+  selected-disabled-button: rgba(map_get($sp-mint, 300), 0.38),
+  disabled-button-toggle:   map_get($mat-grey, 200),
+  unselected-chip:          map_get($mat-grey, 100),
+  disabled-list-option:     map_get($mat-grey, 200),
+);
+
+$mint-peach-foreground: (
+base:                 map_get($sp-mint, 900),
+  divider:            $mint-peach-dividers,
+  dividers:           $mint-peach-dividers,
+  disabled:           $mint-peach-disabled-text,
+  disabled-button:    rgba(map_get($sp-mint, 700), 0.26),
+  disabled-text:      $mint-peach-disabled-text,
+  elevation:          map_get($sp-mint, 800),
+  hint-text:          $mint-peach-disabled-text,
+  secondary-text:     $mint-peach-secondary-text,
+  icon:               rgba(black, 0.54),
+  icons:              rgba(black, 0.54),
+  text:               rgba(black, 0.87),
+  slider-min:         rgba(map_get($sp-mint, 800), 0.87),
+  slider-off:         rgba(map_get($sp-mint, 600), 0.26),
+  slider-off-active:  rgba(map_get($sp-mint, 700), 0.38),
+);
+
+$mint-peach-theme: sp-light-theme(
+  $mint-peach-primary,
+  $mint-peach-accent,
+  $mint-peach-warn,
+  $mint-peach-foreground,
+  $mint-peach-background);
+
+.mint-peach-theme {
+  @include angular-material-theme($mint-peach-theme)
+}
