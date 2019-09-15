@@ -1,8 +1,10 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { SvgIconModule } from '@spremi/svg-icon';
+
 import { AppComponent } from './app.component';
 import { StockModule } from './modules/stock/stock.module';
 import { InfoComponent } from './parts/info/info.component';
@@ -23,6 +25,7 @@ import { PilotComponent } from './parts/pilot/pilot.component';
     BrowserAnimationsModule,
     HttpClientModule,
     StockModule,
+    SvgIconModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
