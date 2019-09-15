@@ -5,20 +5,34 @@
   flex-direction: column
   box-sizing: border-box
 
-  .title
-    display: flex
+  .pilot-bar
     height: 64px
+    display: flex
 
-    padding: 0 16px
+    flex-direction: row
+
+    padding: 16px
+
+    align-items: center
 
     background-color: #121212
     color: #fcfcfc
 
-    box-sizing: border-box
-    align-items: center
+    .logo
+      width: 48px
+      height: 48px
 
-    font-size: 24px
-    font-weight: 500
+    .title
+      padding-left: 16px
 
-  sp-menu
+      font-size: 32px
+      font-weight: 500
+
+  .pilot-contents
+    display: flex
+    flex-direction: column
+
+    flex: 1
+
+  .expand
     flex: 1
