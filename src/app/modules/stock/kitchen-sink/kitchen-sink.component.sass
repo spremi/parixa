@@ -6,36 +6,45 @@
   box-sizing: border-box
   overflow-y: auto
 
-  section
-    border: 1px solid gray
-    border-radius: 8px
+  .app-head
+    z-index: 1
 
-    margin: 16px 0
+  .app-links
+    padding: 8px 16px
+    height: auto
+    flex-wrap: wrap
 
-    h2
-      margin: 0
-      padding: 4px 16px
-      background-color: lightgray
-      border-top-left-radius: 8px
-      border-top-right-radius: 8px
+    button
+      margin: 8px 16px
 
-    div
-      margin: 0
-      padding: 16px
+  .app-body
+    flex: 1
+    box-sizing: border-box
+    padding: 16px
+    overflow-y: auto
 
-      &.horiz
-        display: flex
-        flex-direction: row
-        align-items: self-start
-        justify-content: space-evenly
+    .title
+      margin-top: 16px
 
-      &.vert
-        display: flex
-        flex-direction: column
+  .row
+    display: grid
+    grid-template-columns: auto
+    grid-gap: 24px
+    align-items: center
 
-    mat-toolbar,
-    mat-tab-group
-      margin-bottom: 16px
+  .row-2-elems
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 24px
+    align-items: center
+    justify-items: center
 
-    .spacer
-      flex: 1
+  .row-5-elems
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 24px
+    align-items: center
+    justify-items: center
+
+  .spacer
+    flex: 1

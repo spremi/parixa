@@ -1,136 +1,96 @@
-<section>
-  <h2>Button</h2>
+<div class="app-head mat-elevation-z2">
+  <mat-toolbar color="primary">
+    <span>Sample Application</span>
+  </mat-toolbar>
 
-  <div class="vert">
-    <div class="horiz">
-      <button mat-button>go</button>
-      <button mat-icon-button><mat-icon>search</mat-icon></button>
-      <button mat-raised-button>go</button>
-      <button mat-fab><mat-icon>home</mat-icon></button>
-      <button mat-mini-fab><mat-icon>favorite</mat-icon></button>
-    </div>
+  <mat-toolbar class="app-links">
+    <button mat-stroked-button (click)="scrollTo('buttons')">BUTTONS</button>
+    <button mat-stroked-button (click)="scrollTo('navigation')">NAVIGATION</button>
+    <button mat-stroked-button (click)="scrollTo('layout')">LAYOUT</button>
+    <button mat-stroked-button (click)="scrollTo('controls')">CONTROLS</button>
+    <button mat-stroked-button (click)="scrollTo('indicators')">INDICATORS</button>
+    <button mat-stroked-button (click)="scrollTo('popups')">POPUPS &amp; MODALS</button>
+  </mat-toolbar>
+</div>
 
-    <div class="horiz">
+<div class="app-body">
+  <div id="buttons">
+    <mat-toolbar class="title">BUTTONS</mat-toolbar>
+
+    <h3>ALL BUTTONS</h3>
+    <div class="row-5-elems">
+      <button mat-button>NORMAL</button>
       <button mat-button color="primary">PRIMARY</button>
       <button mat-button color="accent">ACCENT</button>
       <button mat-button color="warn">WARN</button>
       <button mat-button disabled>DISABLED</button>
-    </div>
 
-    <div class="horiz">
+      <button mat-stroked-button>NORMAL</button>
+      <button mat-stroked-button color="primary">PRIMARY</button>
+      <button mat-stroked-button color="accent">ACCENT</button>
+      <button mat-stroked-button color="warn">WARN</button>
+      <button mat-stroked-button disabled>DISABLED</button>
+
+      <button mat-flat-button>NORMAL</button>
+      <button mat-flat-button color="primary">PRIMARY</button>
+      <button mat-flat-button color="accent">ACCENT</button>
+      <button mat-flat-button color="warn">WARN</button>
+      <button mat-flat-button disabled>DISABLED</button>
+
+      <button mat-raised-button>NORMAL</button>
       <button mat-raised-button color="primary">PRIMARY</button>
       <button mat-raised-button color="accent">ACCENT</button>
       <button mat-raised-button color="warn">WARN</button>
       <button mat-raised-button disabled>DISABLED</button>
-    </div>
 
-    <div class="horiz">
+      <button mat-icon-button><mat-icon>search</mat-icon></button>
       <button mat-icon-button color="primary"><mat-icon>search</mat-icon></button>
       <button mat-icon-button color="accent"><mat-icon>search</mat-icon></button>
       <button mat-icon-button color="warn"><mat-icon>search</mat-icon></button>
-      <button mat-icon-button disabled>DISABLED</button>
-    </div>
+      <button mat-icon-button disabled><mat-icon>search</mat-icon></button>
 
-    <div class="horiz">
+      <button mat-fab><mat-icon>home</mat-icon></button>
       <button mat-fab color="primary"><mat-icon>home</mat-icon></button>
       <button mat-fab color="accent"><mat-icon>home</mat-icon></button>
       <button mat-fab color="warn"><mat-icon>home</mat-icon></button>
       <button mat-fab disabled><mat-icon>home</mat-icon></button>
-    </div>
 
-    <div class="horiz">
+      <button mat-mini-fab><mat-icon>home</mat-icon></button>
       <button mat-mini-fab color="primary"><mat-icon>home</mat-icon></button>
       <button mat-mini-fab color="accent"><mat-icon>home</mat-icon></button>
       <button mat-mini-fab color="warn"><mat-icon>home</mat-icon></button>
       <button mat-mini-fab disabled><mat-icon>home</mat-icon></button>
     </div>
 
-    <h3>Anchors</h3>
-    <div class="horiz">
+    <h3>ANCHORS</h3>
+    <div class="row-5-elems">
       <a mat-button href="#">Google</a>
       <a mat-icon-button href="#"><mat-icon>search</mat-icon></a>
       <a mat-raised-button href="#">Google</a>
       <a mat-fab href="#"><mat-icon>home</mat-icon></a>
       <a mat-mini-fab href="#"><mat-icon>favorite</mat-icon></a>
     </div>
-  </div>
-</section>
 
-<section>
-  <h2>Button toggle</h2>
+    <h3>BUTTON TOGGLE</h3>
+    <h4>Single selection</h4>
+    <mat-button-toggle-group>
+      <mat-button-toggle>Ketchup</mat-button-toggle>
+      <mat-button-toggle>Mustard</mat-button-toggle>
+      <mat-button-toggle>Mayo</mat-button-toggle>
+      <mat-button-toggle disabled>Chutney</mat-button-toggle>
+    </mat-button-toggle-group>
 
-  <div class="horiz">
-    <div class="vert">
-      <h3>Single selection</h3>
+    <h4>Multi selection</h4>
+    <mat-button-toggle-group multiple>
+      <mat-button-toggle disabled checked>Ketchup</mat-button-toggle>
+      <mat-button-toggle>Mustard</mat-button-toggle>
+      <mat-button-toggle>Mayo</mat-button-toggle>
+    </mat-button-toggle-group>
 
-      <mat-button-toggle-group>
-        <mat-button-toggle>Ketchup</mat-button-toggle>
-        <mat-button-toggle>Mustard</mat-button-toggle>
-        <mat-button-toggle>Mayo</mat-button-toggle>
-        <mat-button-toggle disabled>Chutney</mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
+    <h4>Standalone</h4>
+    <mat-button-toggle>Toggle</mat-button-toggle>
 
-    <div class="vert">
-      <h3>Multi selection</h3>
-
-      <mat-button-toggle-group multiple>
-        <mat-button-toggle disabled checked>Ketchup</mat-button-toggle>
-        <mat-button-toggle>Mustard</mat-button-toggle>
-        <mat-button-toggle>Mayo</mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="vert">
-      <h3>Standalone</h3>
-      <mat-button-toggle>Toggle</mat-button-toggle>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Card</h2>
-
-  <div class="horiz">
-    <mat-card>
-      Simple card
-    </mat-card>
-    <mat-card>
-      <mat-card-title>Complicated card</mat-card-title>
-      <mat-card-subtitle>Subtitle</mat-card-subtitle>
-      <mat-card-content>
-        <p>This is some stuff</p>
-        <p>And more stuff</p>
-      </mat-card-content>
-
-      <mat-card-actions>
-        <button mat-raised-button>ONE</button>
-        <button mat-flat-button>TWO</button>
-      </mat-card-actions>
-
-      <mat-card-footer>
-        Hurray
-      </mat-card-footer>
-    </mat-card>
-  </div>
-</section>
-
-<section>
-  <h2>Checkbox</h2>
-
-  <div class="horiz">
-    <mat-checkbox checked="true">Checked!</mat-checkbox>
-    <mat-checkbox>With a label</mat-checkbox>
-    <mat-checkbox disabled>Disabled</mat-checkbox>
-    <mat-checkbox></mat-checkbox>Without a label
-    <mat-checkbox disabled>Disabled</mat-checkbox>
-  </div>
-</section>
-
-<section>
-  <h2>Chips</h2>
-
-  <div class="horiz">
+    <h3>CHIPS</h3>
     <mat-chip-list>
       <mat-chip selected>Barbeque Cheddar</mat-chip>
       <mat-chip>Sea Salt and Vinegar</mat-chip>
@@ -140,186 +100,29 @@
       <mat-chip color="warn" selected>Panta Ray</mat-chip>
     </mat-chip-list>
 
+    <h4>Basic</h4>
     <mat-chip-list>
       <mat-basic-chip>Tomato</mat-basic-chip>
       <mat-basic-chip>Scallion</mat-basic-chip>
       <mat-basic-chip>Cilantro</mat-basic-chip>
     </mat-chip-list>
-  </div>
-</section>
 
-<section>
-  <h2>Datepicker</h2>
-
-  <div class="vert">
-    <mat-form-field>
-      <input type="text" matInput [matDatepicker]="birthday" placeholder="Birthday">
-      <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>
-      <mat-datepicker #birthday></mat-datepicker>
-    </mat-form-field>
-
-    <h3>Disabled datepicker</h3>
-
-    <mat-form-field>
-      <input type="text" disabled matInput [matDatepicker]="departureDate" placeholder="Departure date">
-      <mat-datepicker-toggle matSuffix [for]="departureDate"></mat-datepicker-toggle>
-      <mat-datepicker #departureDate></mat-datepicker>
-    </mat-form-field>
-  </div>
-</section>
-
-<section>
-  <h2>Grid list</h2>
-
-  <div class="vert">
-    <mat-grid-list cols="4">
-      <mat-grid-tile>Fry</mat-grid-tile>
-      <mat-grid-tile>Leela</mat-grid-tile>
-      <mat-grid-tile>Amy</mat-grid-tile>
-      <mat-grid-tile>Bender</mat-grid-tile>
-    </mat-grid-list>
-  </div>
-</section>
-
-<section>
-<h2>Icon</h2>
-
-  <div>
+    <h3>ICON</h3>
     <mat-icon>grade</mat-icon>
   </div>
-</section>
 
+  <div id="navigation">
+    <mat-toolbar>NAVIGATION</mat-toolbar>
+    <h3>MENU</h3>
 
-<section>
-  <h2>Input</h2>
-
-  <div class="vert">
-    <mat-form-field floatLabel="never">
-      <input matInput placeholder="name" type="text">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Surname</mat-label>
-      <input matInput placeholder="name" type="text" value="Baggins">
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Dummy</mat-label>
-      <input matInput value="" [formControl]="dummy" required>
-      <mat-error *ngIf="dummy.errors?.required">You have an error!</mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <textarea matInput placeholder="description"></textarea>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="text" placeholder="Clearable input">
-      <button mat-button matSuffix mat-icon-button>
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input type="number" matInput placeholder="amount">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-      <mat-hint>Dolla dolla bills</mat-hint>
-      <mat-error>Recession</mat-error>
-    </mat-form-field>
-  </div>
-</section>
-
-<section>
-  <h2>List</h2>
-
-  <div class="vert">
-    <mat-list>
-      <mat-list-item>Robot</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Android</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Cyborg</mat-list-item>
-    </mat-list>
-
-    <mat-nav-list>
-      <a mat-list-item href="#">Search</a>
-      <a mat-list-item href="#">Find</a>
-      <a mat-list-item href="#">Seek</a>
-    </mat-nav-list>
-  </div>
-</section>
-
-<section>
-<h2>Menu</h2>
-
-  <div class="horiz">
-    <button mat-button [matMenuTriggerFor]="menu">Open</button>
+    <button mat-raised-button [matMenuTriggerFor]="menu">OPEN MENU</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Mercy</button>
       <button mat-menu-item>Lucio</button>
       <button mat-menu-item disabled>Sombra</button>
     </mat-menu>
-  </div>
-</section>
 
-<section>
-  <h2>Progress bar</h2>
-
-  <div class="vert">
-    <mat-progress-bar value="25"></mat-progress-bar>
-    <mat-progress-bar mode="buffer" value="25" bufferValue="60"></mat-progress-bar>
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    <mat-progress-bar mode="query"></mat-progress-bar>
-  </div>
-</section>
-
-<section>
-  <h2>Progress spinner</h2>
-
-  <div class="vert">
-    <mat-progress-spinner mode="indeterminate" [diameter]="32"></mat-progress-spinner>
-    <mat-progress-spinner mode="determinate" [value]="60"></mat-progress-spinner>
-  </div>
-</section>
-
-<section>
-  <h2>Radio buttons</h2>
-
-  <div class="vert">
-    <h3>Radio group</h3>
-    <mat-radio-group>
-      <mat-radio-button>Charmander</mat-radio-button>
-      <mat-radio-button>Squirtle</mat-radio-button>
-      <mat-radio-button>Bulbasaur</mat-radio-button>
-    </mat-radio-group>
-
-    <h3>Standalone radios</h3>
-    <mat-radio-button name="onions">White</mat-radio-button>
-    <mat-radio-button name="onions">Yellow</mat-radio-button>
-    <mat-radio-button name="onions">Green</mat-radio-button>
-    <mat-radio-button name="onions" disabled>Red</mat-radio-button>
-  </div>
-</section>
-
-<section>
-  <h2>Select</h2>
-
-  <div class="horiz">
-    <mat-form-field>
-      <mat-select value="ceramic">
-        <mat-option value="glass">Glass</mat-option>
-        <mat-option value="ceramic">Ceramic</mat-option>
-        <mat-option value="steel">Steel</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-</section>
-
-<section>
-  <h2>Sidenav</h2>
-
-  <div>
+    <h3>SIDENAV</h3>
     <mat-sidenav-container>
       <mat-sidenav opened>
         On the side
@@ -328,149 +131,64 @@
       Main content
       <button>Click me</button>
     </mat-sidenav-container>
+
+    <h3>TOOLBAR</h3>
+    <div class="row">
+      <mat-toolbar>
+        <span>Basic Toolbar</span><span class="spacer"></span>
+        <button mat-flat-button>FLAT</button>&nbsp;&nbsp;
+        <button mat-raised-button>RAISED</button>&nbsp;&nbsp;
+        <button mat-icon-button><mat-icon>home</mat-icon></button>&nbsp;&nbsp;
+      </mat-toolbar>
+
+      <mat-toolbar color="primary">
+        <span>Title</span>
+        <span class="spacer"></span>
+        <button mat-raised-button color="accent">ACCENT</button>&nbsp;&nbsp;
+        <span class="spacer"></span>
+        <button mat-raised-button color="warn">WARN</button>&nbsp;&nbsp;
+        <span class="spacer"></span>
+        <button mat-icon-button><mat-icon>save</mat-icon></button>&nbsp;&nbsp;
+      </mat-toolbar>
+
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Multi Row Toolbar (Row 1)</span>
+          <span class="spacer"></span>
+          <button mat-mini-fab color="warn"><mat-icon>edit</mat-icon></button>
+        </mat-toolbar-row>
+        <mat-toolbar-row>Multi Row Toolbar (Row 2)</mat-toolbar-row>
+      </mat-toolbar>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Slide-toggle</h2>
+  <div id="layout">
+    <mat-toolbar class="title">LAYOUT</mat-toolbar>
+    <h3>CARD</h3>
 
-  <div class="vert">
-    <mat-slide-toggle checked="true">Already checked!</mat-slide-toggle>
-    <mat-slide-toggle>With a label</mat-slide-toggle>
+    <div class="row">
+      <mat-card>Simple card</mat-card>
 
-    <mat-slide-toggle></mat-slide-toggle>Without a label
-  </div>
-</section>
+      <mat-card>
+        <mat-card-title>Complicated card</mat-card-title>
+        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        <mat-card-content>
+          <p>This is some stuff</p>
+          <p>And more stuff</p>
+        </mat-card-content>
 
-<section>
-  <h2>Slider</h2>
+        <mat-card-actions>
+          <button mat-raised-button>ONE</button>
+          <button mat-flat-button>TWO</button>
+        </mat-card-actions>
 
-  <div class="vert">
-    <mat-slider value="20"color="primary"></mat-slider>
-    <mat-slider value="50"color="warn"></mat-slider>
-    <mat-slider tickInterval="1" min="1" max="10" value="5" thumbLabel></mat-slider>
-    <mat-slider disabled></mat-slider>
-  </div>
-</section>
+        <mat-card-footer>
+          Hurray! I am card footer.
+        </mat-card-footer>
+      </mat-card>
+    </div>
 
-<section>
-  <h2>Tabs</h2>
-
-  <div class="vert">
-    <mat-tab-group>
-      <mat-tab label="Overview">
-        The overview
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          API docs
-        </ng-template>
-        The API docs
-      </mat-tab>
-    </mat-tab-group>
-
-    <mat-tab-group color="accent" backgroundColor="primary">
-      <mat-tab label="01">TAB 01</mat-tab>
-      <mat-tab label="02">TAB 02</mat-tab>
-      <mat-tab label="03">TAB 03</mat-tab>
-    </mat-tab-group>
-
-    <nav mat-tab-nav-bar>
-      <a mat-tab-link href="#">Google</a>
-      <a mat-tab-link href="#" active>Also Google</a>
-    </nav>
-  </div>
-</section>
-
-<section>
-  <h2>Paginator</h2>
-
-  <div>
-    <mat-paginator
-      [length]="100"
-      [pageSizeOptions]="[5, 10, 25, 100]">
-    </mat-paginator>
-  </div>
-</section>
-
-<section>
-  <h2>Sort</h2>
-
-  <div>
-    <table matSort>
-      <tr>
-        <th mat-sort-header="name">Name</th>
-        <th mat-sort-header="calories">Calories</th>
-        <th mat-sort-header="fat">Fat</th>
-        <th mat-sort-header="carbs">Carbs</th>
-        <th mat-sort-header="protein">Protein</th>
-      </tr>
-
-      <tr>
-        <td>Cupcake</td>
-        <td>305</td>
-        <td>4</td>
-        <td>67</td>
-        <td>4</td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-<section>
-  <h2>Toolbar</h2>
-
-  <div>
-    <mat-toolbar>Basic toolbar</mat-toolbar>
-    <mat-toolbar>
-      <mat-toolbar-row>Multi row</mat-toolbar-row>
-      <mat-toolbar-row>Toolbar</mat-toolbar-row>
-    </mat-toolbar>
-  </div>
-</section>
-
-<section>
-  <h2>Toolbar</h2>
-
-  <div>
-  <mat-toolbar>
-    <span>Title</span><span class="spacer"></span>
-    <button mat-flat-button>FLAT</button>&nbsp;&nbsp;
-    <button mat-raised-button>RAISED</button>&nbsp;&nbsp;
-    <button mat-icon-button><mat-icon>home</mat-icon></button>&nbsp;&nbsp;
-  </mat-toolbar>
-
-  <mat-toolbar color="primary">
-    <span>Title</span>
-    <span class="spacer"></span>
-    <button mat-raised-button color="accent">ACCENT</button>&nbsp;&nbsp;
-    <span class="spacer"></span>
-    <button mat-icon-button><mat-icon>search</mat-icon></button>&nbsp;&nbsp;
-    <button mat-icon-button color="accent"><mat-icon>search</mat-icon></button>&nbsp;&nbsp;
-    <span class="spacer"></span>
-    <button mat-icon-button><mat-icon>home</mat-icon></button>&nbsp;&nbsp;
-    <button mat-mini-fab color="warn"><mat-icon>home</mat-icon></button>
-  </mat-toolbar>
-
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>Multi Row Toolbar (Row 1)</mat-toolbar-row>
-    <mat-toolbar-row>Multi Row Toolbar (Row 2)</mat-toolbar-row>
-  </mat-toolbar>
-</div>
-</section>
-
-<section>
-  <h2>Tooltip</h2>
-
-  <div>
-    <button matTooltip="Action!">Go</button>
-  </div>
-</section>
-
-<section>
-  <h2>Expansion Panel</h2>
-
-  <div>
+    <h3>EXPANSION PANEL</h3>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-description>This is a panel description.</mat-panel-description>
@@ -479,13 +197,25 @@
       This is the content text that makes sense here.
       <mat-action-row>Action</mat-action-row>
     </mat-expansion-panel>
-  </div>
-</section>
 
-<section>
-  <h2>Selection list</h2>
+    <h3>LIST</h3>
+    <h4>Simple</h4>
+    <mat-list>
+      <mat-list-item> Pepper </mat-list-item>
+      <mat-list-item> Salt </mat-list-item>
+      <mat-list-item> Paprika </mat-list-item>
+    </mat-list>
 
-  <div>
+    <h4>With divider</h4>
+    <mat-list>
+      <mat-list-item>Robot</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Android</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Cyborg</mat-list-item>
+    </mat-list>
+
+    <h4>Selection list</h4>
     <mat-selection-list>
       <h3 mat-subheader>Groceries</h3>
       <mat-list-option value="apples">Apples</mat-list-option>
@@ -493,20 +223,28 @@
       <mat-list-option value="oranges">Oranges</mat-list-option>
       <mat-list-option value="milk" disabled>Milk</mat-list-option>
     </mat-selection-list>
-  </div>
-</section>
 
-<section>
-  <h2>Vertical Stepper</h2>
+    <h4>Navigation list</h4>
+    <mat-nav-list>
+      <a mat-list-item href="#">Search</a>
+      <a mat-list-item href="#">Find</a>
+      <a mat-list-item href="#">Seek</a>
+    </mat-nav-list>
 
-  <div class="vert">
+    <h3>STEPPER</h3>
+    <h4>Horizontal Stepper</h4>
+    <mat-horizontal-stepper>
+      <mat-step label="Step 1">Content 1</mat-step>
+      <mat-step label="Step 2">Content 2</mat-step>
+    </mat-horizontal-stepper>
+
+    <h4>Vertical Stepper</h4>
     <mat-vertical-stepper>
       <mat-step label="Step 1">Content 1</mat-step>
       <mat-step label="Step 1">Content 2</mat-step>
     </mat-vertical-stepper>
 
-    <h3>Vertical Stepper (with label template)</h3>
-
+    <h4>Vertical Stepper (with label template)</h4>
     <mat-vertical-stepper>
       <mat-step>
         <ng-template matStepLabel>NgTemplate Label #1</ng-template>
@@ -517,42 +255,185 @@
         Content 2
       </mat-step>
     </mat-vertical-stepper>
+
+    <h3>TABS</h3>
+    <div class="row">
+      <mat-tab-group>
+        <mat-tab label="Overview">
+          The overview
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            API docs
+          </ng-template>
+          The API docs
+        </mat-tab>
+      </mat-tab-group>
+
+      <mat-tab-group color="accent" backgroundColor="primary">
+        <mat-tab label="01">TAB 01</mat-tab>
+        <mat-tab label="02">TAB 02</mat-tab>
+        <mat-tab label="03">TAB 03</mat-tab>
+      </mat-tab-group>
+
+      <nav mat-tab-nav-bar>
+        <a mat-tab-link href="#">Google</a>
+        <a mat-tab-link href="#" active>Also Google</a>
+      </nav>
+    </div>
   </div>
-</section>
 
+  <div id="controls">
+    <mat-toolbar class="title">CONTROLS</mat-toolbar>
+    <h3>CHECKBOX</h3>
 
-<section>
-  <h2>Horizontal Stepper</h2>
+    <div class="row-5-elems">
+      <mat-checkbox checked="true">Checked!</mat-checkbox>
+      <mat-checkbox>With a label</mat-checkbox>
+      <mat-checkbox disabled>Disabled</mat-checkbox>
+      <mat-checkbox></mat-checkbox>Without a label
+      <mat-checkbox disabled>Disabled</mat-checkbox>
+    </div>
 
-  <div class="horiz">
-    <mat-horizontal-stepper>
-      <mat-step label="Step 1">Content 1</mat-step>
-      <mat-step label="Step 2">Content 2</mat-step>
-    </mat-horizontal-stepper>
+    <h3>DATE PICKER</h3>
+    <mat-form-field>
+      <input type="text" matInput [matDatepicker]="birthday" placeholder="Birthday">
+      <mat-datepicker-toggle matSuffix [for]="birthday"></mat-datepicker-toggle>
+      <mat-datepicker #birthday></mat-datepicker>
+    </mat-form-field>
+
+    <h4>Disabled datepicker</h4>
+    <mat-form-field>
+      <input type="text" disabled matInput [matDatepicker]="departureDate" placeholder="Departure date">
+      <mat-datepicker-toggle matSuffix [for]="departureDate"></mat-datepicker-toggle>
+      <mat-datepicker #departureDate></mat-datepicker>
+    </mat-form-field>
+
+    <h3>INPUT</h3>
+    <div class="row-2-elems">
+      <mat-form-field floatLabel="never">
+        <input matInput placeholder="Name" type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Surname</mat-label>
+        <input matInput placeholder="Name" type="text" value="Baggins">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Dummy</mat-label>
+        <input matInput value="" [formControl]="dummy" required>
+        <mat-error *ngIf="dummy.errors?.required">You have an error!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Clearable input">
+        <button mat-button matSuffix mat-icon-button>
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input type="number" matInput placeholder="amount">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+        <mat-hint>Dolla dolla bills</mat-hint>
+        <mat-error>Recession</mat-error>
+      </mat-form-field>
+    </div>
+
+    <h3>RADIO BUTTON</h3>
+    <h4>Group</h4>
+    <mat-radio-group>
+      <mat-radio-button>Charmander</mat-radio-button>
+      <mat-radio-button>Squirtle</mat-radio-button>
+      <mat-radio-button>Bulbasaur</mat-radio-button>
+    </mat-radio-group>
+
+    <h4>Standalone</h4>
+    <div class="row-5-elems">
+      <mat-radio-button name="onions">White</mat-radio-button>
+      <mat-radio-button name="onions">Yellow</mat-radio-button>
+      <mat-radio-button name="onions">Green</mat-radio-button>
+      <mat-radio-button name="onions">Red</mat-radio-button>
+      <mat-radio-button name="onions" disabled>Powder</mat-radio-button>
+    </div>
+
+    <h3>SELECT</h3>
+    <mat-form-field>
+      <mat-select value="ceramic">
+        <mat-option value="glass">Glass</mat-option>
+        <mat-option value="ceramic">Ceramic</mat-option>
+        <mat-option value="steel">Steel</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <h3>SLIDER</h3>
+    <div class="row">
+      <mat-slider value="20"color="primary"></mat-slider>
+      <mat-slider value="50"color="warn"></mat-slider>
+      <mat-slider tickInterval="1" min="1" max="10" value="5" thumbLabel></mat-slider>
+      <mat-slider disabled></mat-slider>
+    </div>
+
+    <h3>SLIDE-TOGGLE</h3>
+    <div class="row">
+      <mat-slide-toggle checked="true">Already checked!</mat-slide-toggle>
+      <mat-slide-toggle>With a label</mat-slide-toggle>
+      <span>
+        <mat-slide-toggle></mat-slide-toggle>Without a label
+      </span>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Badge</h2>
+  <div id="indicators">
+    <mat-toolbar class="title">INDICATORS</mat-toolbar>
+    <h3>BADGE</h3>
+    <div class="row-2-elems">
+      <button mat-raised-button matBadge="88">Test Badge</button>
+      <button mat-flat-button matBadge="99" color="primary">Test Badge</button>
+      <button mat-flat-button matBadge="55" color="accent">Test Badge</button>
+      <button mat-flat-button matBadge="0" color="warn">Test Badge</button>
+    </div>
 
-  <div class="horiz">
-    <button mat-flat-button matBadge="99" color="accent">Test Badge</button>
-    <button mat-raised-button matBadge="99">Test Badge</button>
+    <h3>PROGRESS BAR</h3>
+    <div class="row">
+      <mat-progress-bar value="25"></mat-progress-bar>
+      <mat-progress-bar mode="buffer" value="60" bufferValue="100"></mat-progress-bar>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+       <mat-progress-bar mode="query"></mat-progress-bar>
+    </div>
+
+    <h3>PROGRESS SPINNER</h3>
+    <div class="row-2-elems">
+      <mat-progress-spinner mode="indeterminate" diameter="32"></mat-progress-spinner>
+      <mat-progress-spinner mode="determinate" diameter="32" value="75"></mat-progress-spinner>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Dialog</h2>
+  <div id="popups">
+    <mat-toolbar class="title">POPUPS &amp; MODALS</mat-toolbar>
 
-  <div class="horiz">
+    <h3>DIALOG</h3>
     <button mat-raised-button (click)="openDialog()">OPEN DIALOG</button>
-  </div>
-</section>
 
-<section>
-  <h2>Snackbar</h2>
-
-  <div class="horiz">
+    <h3>SNACKBAR</h3>
     <button mat-raised-button (click)="openSnackbar()">SNACK TIME</button>
+
+    <h3>TOOLTIP</h3>
+    <button mat-raised-button matTooltip="Action!">SHOW TOOLTIP</button>
   </div>
-</section>
+
+  <div id="table">
+    <mat-toolbar class="title">TABLE</mat-toolbar>
+
+    <mat-paginator
+      [length]="100"
+      [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+  </div>
+</div>
