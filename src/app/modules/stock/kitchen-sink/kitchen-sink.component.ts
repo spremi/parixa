@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -30,7 +31,11 @@ export class KitchenSinkComponent implements OnInit {
 
   dummy = new FormControl('', [Validators.required]);
 
-  constructor(private snackBar: MatSnackBar, public dialog: MatDialog) { }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private snackBar: MatSnackBar,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
   }
@@ -45,5 +50,15 @@ export class KitchenSinkComponent implements OnInit {
       verticalPosition: 'top',
       horizontalPosition: 'right',
     });
+  }
+
+
+  /**
+   * Scroll to the element with specified 'id'.
+   */
+  scrollTo(elemId: string) {
+    const elem: HTMLElement = this.document.getElementById(elemId);
+
+    elem.scrollIntoView({ behavior: 'smooth' });
   }
 }
