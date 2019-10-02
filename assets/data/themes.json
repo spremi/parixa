@@ -1,0 +1,23 @@
+[
+  {
+    "name": "default",
+    "label": "Default",
+    "primary": "#3f51b5",
+    "accent": "#ff4081",
+    "warn": "#f44336"
+  },
+  {
+    "name": "cheerful",
+    "label": "Cheerful",
+    "primary": "#03a9f4",
+    "accent": "#e040fb",
+    "warn": "#e91e63"
+  },
+  {
+    "name": "mint-peach-theme",
+    "label": "Mint Peach",
+    "primary": "#2398ab",
+    "accent": "#ff756b",
+    "warn": "#e20338"
+  }
+]
