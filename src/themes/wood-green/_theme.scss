@@ -1,0 +1,67 @@
+//
+// [parixa] wood-green-theme
+//
+// Sanjeev Premi <spremi@ymail.com>
+//
+// Available under terms of the BSD-3-Clause license.
+//
+
+@import '../common.scss';
+@import './palette.scss';
+
+$wood-green-primary-text: rgba(black, 0.87);
+$wood-green-secondary-text: rgba(map_get($sp-brown-wood, 800), 0.54);
+$wood-green-disabled-text: rgba(map_get($sp-brown-wood, 800), 0.38);
+
+$wood-green-dividers: rgba(map_get($sp-brown-wood, 800), 0.12);
+$wood-green-focused: rgba(map_get($sp-brown-wood, 800), 0.12);
+
+$wood-green-primary: mat-palette($sp-brown-wood, 500, 200, 700);
+$wood-green-accent: mat-palette($sp-apple-green, 500, 300, 800);
+$wood-green-warn: mat-palette($sp-apple-red, 500, 200, 800);
+
+$wood-green-background: (
+  status-bar:               map-get($sp-brown-wood, 300),
+  app-bar:                  rgba(map_get($sp-brown-wood, 50), 0.87),
+  background:               map_get($sp-brown-wood, 50),
+  hover:                    rgba(map_get($sp-brown-wood, 200), 0.28),
+  card:                     white,
+  dialog:                   white,
+  disabled-button:          rgba(black, 0.12),
+  raised-button:            white,
+  focused-button:           $wood-green-focused,
+  selected-button:          map_get($sp-brown-wood, 300),
+  selected-disabled-button: rgba(map_get($sp-brown-wood, 400), 0.38),
+  disabled-button-toggle:   map_get($mat-grey, 200),
+  unselected-chip:          map_get($sp-brown-wood, 100),
+  disabled-list-option:     map_get($sp-brown-wood, 200),
+);
+
+$wood-green-foreground: (
+base:                 map_get($sp-brown-wood, 900),
+  divider:            $wood-green-dividers,
+  dividers:           $wood-green-dividers,
+  disabled:           $wood-green-disabled-text,
+  disabled-button:    rgba(map_get($sp-brown-wood, 700), 0.26),
+  disabled-text:      $wood-green-disabled-text,
+  elevation:          map_get($sp-brown-wood, 800),
+  hint-text:          $wood-green-disabled-text,
+  secondary-text:     $wood-green-secondary-text,
+  icon:               rgba(black, 0.54),
+  icons:              rgba(black, 0.54),
+  text:               rgba(black, 0.87),
+  slider-min:         rgba(map_get($sp-brown-wood, 800), 0.87),
+  slider-off:         rgba(map_get($sp-brown-wood, 600), 0.26),
+  slider-off-active:  rgba(map_get($sp-brown-wood, 700), 0.38),
+);
+
+$wood-green-theme: sp-light-theme(
+  $wood-green-primary,
+  $wood-green-accent,
+  $wood-green-warn,
+  $wood-green-foreground,
+  $wood-green-background);
+
+.wood-green-theme {
+  @include angular-material-theme($wood-green-theme)
+}
