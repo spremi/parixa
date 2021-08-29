@@ -14,7 +14,7 @@ export class ThemeService {
   /**
    * Current theme, if any.
    */
-  private current: ThemeData;
+  private current: ThemeData = null;
 
   /**
    * Behavior subject to track change in selected theme.
