@@ -49,6 +49,9 @@ The ``background`` map defines these colors:
     * Stepper title.
 * ``card``
     * Fill color of card.
+    * Fill color of date-picker.
+    * Fill color of menu.
+    * Fill color of dropdown selection.
 * ``dialog``
     * Fill color of dialog.
 * ``disabled-button``
