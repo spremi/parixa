@@ -19,5 +19,12 @@
     "primary": "#2398ab",
     "accent": "#ff756b",
     "warn": "#e20338"
+  },
+  {
+    "name": "wood-green-theme",
+    "label": "Wood Green",
+    "primary": "#4c382c",
+    "accent": "#33a83e",
+    "warn": "#a8333e"
   }
 ]
