@@ -16,7 +16,7 @@ $mint-peach-disabled-text: rgba(map_get($sp-mint, 900), 0.38);
 $mint-peach-dividers: rgba(map_get($sp-mint, 900), 0.12);
 $mint-peach-focused: rgba(map_get($sp-mint, 900), 0.12);
 
-$mint-peach-primary: mat-palette($sp-mint, 500, 300, 700);
+$mint-peach-primary: mat-palette($sp-mint, 500, 200, 700);
 $mint-peach-accent: mat-palette($sp-peach, 500, 400, 800);
 $mint-peach-warn: mat-palette($sp-red, 500, 300, 700);
 
@@ -25,7 +25,7 @@ $mint-peach-background: (
   app-bar:                  map_get($sp-mint, 100),
   background:               map_get($mat-grey, 50),
   hover:                    rgba(map_get($sp-mint, 200), 0.28),
-  card:                     map_get($sp-mint, 50),
+  card:                     white,
   dialog:                   white,
   disabled-button:          rgba(black, 0.12),
   raised-button:            white,
